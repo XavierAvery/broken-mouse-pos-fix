@@ -1,0 +1,38 @@
+<!doctype html>
+<!--added the lang attribute for english-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mouse Position Display</title>
+</head>
+
+<body>
+	<h1>Xavier's Data</h1>
+    <!--Remove # sign in the id-->
+	<p>The mouse is located at position (<span id='xPos'></span>,<span id='yPos'></span>), and is <span id='dist'></span> pixels from the lower-left corner.</p>
+    <!-- Included jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<!--Placed the script tags inside the body tag-->
+    <script> 
+
+        // Initialize x and y variables
+        var x, y;
+
+		$(document).mousemove(function(event){
+			updateXY();
+			
+			dist = Math.sqrt(x**2 + y**2);
+			$('#dist').text(dist);
+		});
+		
+		function updateXY(){
+			x = event.pageX; // removed var
+			y = event.pageY; // removed var
+		
+			$('#xPos').text(x);
+			$('#yPos').text(y);
+		}
+	</script>
+</body>
+</html>
+

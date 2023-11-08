@@ -3,18 +3,20 @@
 <html lang="en">
 <head>	
   <meta charset="utf-8">
-  <title>Mouse Position Display</title>
+  <title>Mouse Position</title>
 </head>
 
 <body>
-	<h1>Xavier's Data</h1>
-    <!--Remove # sign in the id-->
-	<p>The mouse is located at position (<span id='xPos'></span>,<span id='yPos'></span>), and is <span id='dist'></span> pixels from the lower-left corner.</p>
-    <!-- Included jQuery library -->
+	<h1>Xavier Avery's Mouse Tracker</h1>
+    
+	<!--Remove # sign in the id and changed the text 'lower-left' to 'upper-rigth'-->
+	<p>The mouse is located at position (<span id='xPos'></span>,<span id='yPos'></span>), and is <span id='dist'></span> pixels from the upper-right corner.</p>
+    
+	<!-- Included jQuery library -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	
 	<!--Placed the script tags inside the body tag-->
     <script> 
-
         // Initialize x and y variables
         var x, y;
 
